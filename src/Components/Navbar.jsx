@@ -301,7 +301,7 @@ export default function Navbar() {
             onChange={handleSelectChange}
           >
             <option value="">Home</option>
-            <option value="/home1">Home 1</option>
+            <option value="/">Home</option>
             <option value="/home2">Home 2</option>
           </select>
 
@@ -310,7 +310,7 @@ export default function Navbar() {
             onChange={handleSelectChange}
           >
             <option value="">About Us</option>
-            <option value="/about-story">Our Story</option>
+            <option value="/About">About</option>
             <option value="/about-team">Team</option>
           </select>
 

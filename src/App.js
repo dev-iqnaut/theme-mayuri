@@ -2,6 +2,7 @@
 import './App.css'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './Components/Home';
+import About from './Components/About';
 
 
 // import EmployeeForm from './components/EmployeeForm'
@@ -12,7 +13,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home/>} />
-        {/* <Route path="/home" element={<QuickLinks />} /> */}
+        <Route path="/About" element={<About/>} />
         {/* <Route path="/performance-management" element={<PerformanceReviewForm />} /> */}
         {/* <Route path="/performance-analytics" element={<PerformanceAnalytics />} /> */}
         {/* <Route path="/payroll" element={<Payroll/>}/> */}

@@ -2,7 +2,7 @@ import React from 'react';
 
 const PricingPlans = () => {
   return (
-    <section className="py-12 px-6">
+    <section className="py-12 px-10"> {/* Adjusted left and right padding */}
       {/* Section heading */}
       <div className="text-center mb-12">
         <h4 className="text-lg text-blue-500">Our Pricing</h4>
@@ -15,7 +15,7 @@ const PricingPlans = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Starter Plan */}
         <div className="bg-white p-8 rounded-lg shadow-lg text-center">
-          <h3 className="text-xl font-semibold mb-4">Stater Plan</h3>
+          <h3 className="text-xl font-semibold mb-4">Starter Plan</h3>
           <p className="text-4xl font-bold mb-4">$19<span className="text-lg font-normal">/mo</span></p>
           <ul className="mb-6">
             <li className="text-green-500">✓ Mistakes To Avoid</li>
