@@ -319,17 +319,17 @@ export default function Navbar() {
             onChange={handleSelectChange}
           >
             <option value="">Services</option>
-            <option value="/service1">Service 1</option>
-            <option value="/service2">Service 2</option>
+            <option value="/Service">Service</option>
+            <option value="/Service Details">Service Details</option>
           </select>
 
           <select
             className="text-black text-center py-2 px-2 rounded transition-colors duration-200 ml-2 hover:bg-gray-200"
             onChange={handleSelectChange}
           >
-            <option value="">Projects</option>
-            <option value="/project1">Project 1</option>
-            <option value="/project2">Project 2</option>
+            <option value="">FAQ</option>
+            <option value="/FAQ">FAQ</option>
+           
           </select>
 
           <select
@@ -337,8 +337,8 @@ export default function Navbar() {
             onChange={handleSelectChange}
           >
             <option value="">Blog</option>
-            <option value="/blog1">Blog 1</option>
-            <option value="/blog2">Blog 2</option>
+            <option value="/Blogs">Blog 1</option>
+            <option value="/BlogDetails">BlogDetails</option>
           </select>
 
           <select
@@ -346,7 +346,7 @@ export default function Navbar() {
             onChange={handleSelectChange}
           >
             <option value="">Contact</option>
-            <option value="/contact1">Contact 1</option>
+            <option value="/Contact">Contact</option>
             <option value="/contact2">Contact 2</option>
           </select>
 

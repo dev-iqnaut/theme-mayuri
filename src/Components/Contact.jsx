@@ -6,18 +6,17 @@ import Footer from './Footer';
 import Abt from './Abt';
 
 import StayConnected from './StayCoonected';
+import ContactSection from './Contact1';
+import ContactSection2 from './Contact2';
 
-import ServiceDetails2 from './ServiceDetails2';
-import ServiceDetails1 from './ServiceDetails';
 
-
-const ServiceDetail = () => {
+const Contact = () => {
   return (
     <div>
      <Navbar/>
      <Abt/>
-     <ServiceDetails1/>
-     <ServiceDetails2/>
+     <ContactSection/>
+     <ContactSection2/>
      <StayConnected/>
     
      <Footer/>
@@ -25,4 +24,4 @@ const ServiceDetail = () => {
   );
 }
 
-export default ServiceDetail;
+export default Contact;

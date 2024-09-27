@@ -4,7 +4,7 @@ import { FaMapMarkerAlt, FaEnvelope, FaPhone } from 'react-icons/fa'; // Import 
 
 const Footer = () => {
   return (
-    <footer className="bg-white py-8 border-t">
+    <footer className="bg-white py-8 border-t p-36">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-start space-y-4 md:space-y-0">
         {/* Logo and description */}
         <div className="flex flex-col items-center md:items-start">

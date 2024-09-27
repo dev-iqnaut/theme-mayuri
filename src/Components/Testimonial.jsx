@@ -170,4 +170,3 @@ const Testimonial = () => {
 };
 
 export default Testimonial;
-s

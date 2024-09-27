@@ -7,11 +7,10 @@ import EducationSection from './EducationSection';
 import HeroSection from './HeroSection';
 import FacultyCard from './Faculty';
 import EducationalPrograms from './EducationProgram';
-import PricingPlans from './PricePlans';
+
 import FAQSection from './Faq1';
-import ServiceM from './ServiceM';
-import ContactSection from './Contact1';
-import ContactSection2 from './Contact2';
+
+
 import BlogD1 from './BlogD1';
 import ConnectedH from './ConnectedH';
 import Testimonial from './Testimonial';
@@ -46,9 +45,7 @@ const Home = () => {
      
      
      
-     <ServiceM/>
-     <ContactSection/>
-     <ContactSection2/>
+     
      <BlogD1/>
      
      <ServiceDetails2/>

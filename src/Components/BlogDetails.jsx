@@ -6,23 +6,24 @@ import Footer from './Footer';
 import Abt from './Abt';
 
 import StayConnected from './StayCoonected';
+import BlogD1 from './BlogD1';
 
-import ServiceDetails2 from './ServiceDetails2';
-import ServiceDetails1 from './ServiceDetails';
+import BlogD2 from './BlogD2';
+// import BlogD3 from './BlogD3';
 
 
-const ServiceDetail = () => {
+const BlogDetails= () => {
   return (
     <div>
      <Navbar/>
      <Abt/>
-     <ServiceDetails1/>
-     <ServiceDetails2/>
+     <BlogD1/>
+     <BlogD2/>
+     {/* <BlogD3/> */}
      <StayConnected/>
     
      <Footer/>
     </div>
   );
 }
-
-export default ServiceDetail;
+export default BlogDetails;
