@@ -224,7 +224,7 @@ const Navbar = () => {
         <div className="container mx-auto flex justify-between items-center">
           {/* Logo */}
           <div className="flex items-center">
-            <img src="logo.png" alt="Ascent Logo" className="w-12 h-12 mr-2" />
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp_lioPzz-gZp3vNwcaFWpFmnAqKxYxryo8Q&s" alt="Ascent Logo" className="w-12 h-12 mr-2" />
             <span className="text-2xl font-bold text-gray-700">Ascent</span>
           </div>
 
@@ -284,7 +284,7 @@ const Navbar = () => {
     >
       <option value="">Services</option>
       <option value="/Service">Service</option>
-      <option value="/Service Details">Service Details</option>
+      <option value="/ServiceDetails">Service Details</option>
     </select>
   </li>
 
@@ -300,7 +300,7 @@ const Navbar = () => {
       onChange={handleSelectChange}
     >
       <option value="">Blog</option>
-      <option value="/Blogs">Blog</option>
+      <option value="/Blog">Blog</option>
       <option value="/BlogDetails">Blog Details</option>
     </select>
   </li>
@@ -316,7 +316,7 @@ const Navbar = () => {
 
 
           {/* Right Section */}
-          <div className="flex items-center space-x-4 pr-28">
+          <div className="flex items-center space-x-4 pr-24">
             {/* Search Icon */}
             <FontAwesomeIcon icon={faSearch} className="text-gray-600 cursor-pointer" />
 

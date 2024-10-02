@@ -125,7 +125,7 @@ const FAQSection = () => {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-center p-10 relative">
+    <div className="flex flex-col lg:flex-row items-center justify-center px-28 relative">
       {/* Left Image Section */}
       <div className="lg:w-1/2 w-full flex justify-center mb-10 lg:mb-0 relative">
         <img

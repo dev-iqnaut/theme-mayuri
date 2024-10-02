@@ -7,7 +7,7 @@ const BlogSection = () => {
       title: 'Empowering Children Through Education the a Igniting',
       date: 'October 19, 2023',
       author: 'By admin',
-      image: 'https://via.placeholder.com/150',
+      image: 'https://images.indianexpress.com/2018/09/room-dreamstime.jpg?w=414',
       description: 'Empowering children to unlock their potential...',
     },
     {
@@ -15,7 +15,7 @@ const BlogSection = () => {
       title: 'Joyful Journeys Childcare and Education Igniting Curiosity',
       date: 'October 19, 2023',
       author: 'By admin',
-      image: 'https://via.placeholder.com/150',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwwumYRWT-HL0yM84f0NpSmI8eskIj_7f0lw&s',
       description: 'Childcare that sparks curiosity...',
     },
     {
@@ -23,14 +23,14 @@ const BlogSection = () => {
       title: 'Empowering Children Through Education the a Igniting Curiosity and Imagination',
       date: 'October 19, 2023',
       author: 'By admin',
-      image: 'https://via.placeholder.com/150',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwBLC8fhrPGV99tj5WUT6l9kyrzxFb6LwI5w&s',
       description: 'Igniting curiosity and imagination...',
     },
   ];
 
   return (
     <div className="bg-[#FEF7F3] py-10">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-28">
         <h2 className="text-sm font-semibold text-teal-500">Latest Blog And News</h2>
         <h1 className="text-3xl font-bold mt-2 mb-8">Wonderworks Child Development Center Discovery Kids Preschool</h1>
         

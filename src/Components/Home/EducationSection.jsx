@@ -20,26 +20,61 @@ const EducationSection = () => {
       </div>
 
       {/* Right Side: Overlapping Circles */}
-      <div className="relative grid grid-cols-2 gap-4 md:w-1/2">
-        <div className="bg-blue-200 p-4 text-center text-sm rounded-full transform translate-x-2 -translate-y-2 z-10 w-24 h-24 flex items-center justify-center">
-          1-2 Years
-        </div>
-        <div className="bg-green-200 p-6 text-center text-md rounded-full transform -translate-x-4 translate-y-3 z-20 w-28 h-28 flex items-center justify-center">
-          6-8 Years
-        </div>
-        <div className="bg-purple-200 p-5 text-center text-lg rounded-full transform translate-x-6 -translate-y-4 z-30 w-32 h-32 flex items-center justify-center">
-          3-5 Years
-        </div>
-        <div className="bg-yellow-200 p-3 text-center text-xs rounded-full transform -translate-x-6 translate-y-4 z-40 w-20 h-20 flex items-center justify-center">
-          16-18 Years
-        </div>
-        <div className="bg-red-200 p-4 text-center text-lg rounded-full transform translate-x-4 -translate-y-3 z-50 w-24 h-24 flex items-center justify-center">
-          12-15 Years
-        </div>
-        <div className="bg-teal-200 p-5 text-center text-md rounded-full transform -translate-x-2 translate-y-5 z-60 w-28 h-28 flex items-center justify-center">
-          9-11 Years
-        </div>
-      </div>
+      {/* <div className="relative grid grid-cols-2 gap-4 md:w-1/2">
+  <div className="bg-pink-200 p-4 text-center text-sm rounded-lg w-60 h-16 flex items-center justify-center">
+    1-2 Years
+  </div>
+  <div className="bg-blue-200 p-4 text-center text-sm rounded-lg w-60 h-16 flex items-center justify-center">
+    3-5 Years
+  </div>
+  <div className="bg-green-200 p-4 text-center text-sm rounded-lg w-72 h-16 flex items-center justify-center">
+    6-8 Years
+  </div>
+  <div className="bg-purple-200 p-4 text-center text-sm rounded-lg w-64 h-16 flex items-center justify-center">
+    9-11 Years
+  </div>
+  <div className="bg-teal-200 p-4 text-center text-sm rounded-lg w-64 h-16 flex items-center justify-center">
+    9-11 Years
+  </div>
+  <div className="bg-teal-200 p-4 text-center text-sm rounded-lg w-64 h-16 flex items-center justify-center">
+    9-11 Years
+  </div>
+</div> */}
+
+<div className="relative grid grid-cols-1 gap-6 md:w-1/2">
+  {/* 1st and 2nd boxes */}
+  <div className="relative">
+    <div className="bg-pink-200 p-4 text-center text-sm rounded-lg w-60 h-16 flex items-center justify-center">
+      1-2 Years
+    </div>
+    <div className="bg-blue-200 p-4 text-center text-sm rounded-lg w-60 h-16 flex items-center justify-center absolute -right-4 top-8">
+      3-5 Years
+    </div>
+  </div>
+
+  {/* 3rd and 4th boxes */}
+  <div className="relative">
+    <div className="bg-green-200 p-4 text-center text-sm rounded-lg w-72 h-16 flex items-center justify-center">
+      6-8 Years
+    </div>
+    <div className="bg-purple-200 p-4 text-center text-sm rounded-lg w-64 h-16 flex items-center justify-center absolute -right-4 top-8">
+      9-11 Years
+    </div>
+  </div>
+
+  {/* 5th and 6th boxes */}
+  <div className="relative">
+    <div className="bg-teal-200 p-4 text-center text-sm rounded-lg w-64 h-16 flex items-center justify-center">
+      9-11 Years
+    </div>
+    <div className="bg-teal-200 p-4 text-center text-sm rounded-lg w-64 h-16 flex items-center justify-center absolute -right-4 top-8">
+      9-11 Years
+    </div>
+  </div>
+</div>
+
+
+      
     </div>
   );
 };

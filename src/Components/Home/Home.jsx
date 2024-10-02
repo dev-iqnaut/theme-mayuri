@@ -11,6 +11,7 @@ import LatestService from './LatestService';
 import FAQSection from '../FAQ/Faq1';
 import HeroSection from './HeroSection';
 import StatsSection from './Statsection';
+import ConnectedH from '../ConnectedH';
 // import Navbar from './Navbar';
 
 
@@ -34,6 +35,7 @@ const Home = () => {
      <EducationSection/>
     <BlogSection/>
     <Testimonial/>
+    <ConnectedH/>
      
     
 

@@ -48,7 +48,7 @@ const ContactSection = () => {
       {/* Map Section */}
       <div className="w-full h-64 mt-8">
         <img
-          src="https://via.placeholder.com/1500x400" // Replace with actual map image or Google Maps embed
+          src="" // Replace with actual map image or Google Maps embed
           alt="Map"
           className="w-full h-full object-cover"
         />

@@ -10,8 +10,13 @@ import About from './Components/About/About';
 import FAQ from './Components/FAQ/FAQ';
 import Contact from './Components/Contact/Contact';
 import Blog from './Components/Blog/Blog';
-import ServiceDetail from './Components/Service/ServiceDeatails';
+
 import Footer from './Components/Footer';
+import BlogDetails from './Components/BlogDetails/BlogDetail';
+import Service from './Components/Service/Service';
+import ServiceDetail from './Components/Service/ServiceDetailMAin';
+
+
 
 
 
@@ -27,10 +32,10 @@ function App() {
         <Route path="/About" element={<About/>} />
         <Route path="/FAQ" element={<FAQ/>} />
         <Route path="/contact" element={<Contact/>} />
-        <Route path="/BLOG" element={<Blog/>} />
-        {/* <Route path="/BlogDetails" element={<BlogDea/>} /> */}
-        <Route path="/serviceDetails" element={<ServiceDetail/>} />
-        {/* <Route path="/Service" element={<Service>} /> */}
+        <Route path="/Blog" element={<Blog/>} />
+        <Route path="/BlogDetails" element={<BlogDetails/>} />
+        <Route path="/ServiceDetails" element={<ServiceDetail/>} />
+        <Route path="/Service" element={<Service/>} />
         <Route path="/About" element={<About/>} />
         
        

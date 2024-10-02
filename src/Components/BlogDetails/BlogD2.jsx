@@ -1,160 +1,5 @@
 
 
-// import React from "react";
-
-// const BlogD2 = () => {
-//   const categories = [
-//     { name: "EduTech Solutions", count: "01", link: "/edutech-solutions" },
-//     { name: "SmartAcademy", count: "07", link: "/smartacademy" },
-//     { name: "KnowledgeHub", count: "02", link: "/knowledgehub" },
-//     { name: "Specialist", count: "04", link: "/specialist" },
-//     { name: "Education is the door", count: "03", link: "/education-door" },
-//   ];
-
-//   const posts = [
-//     {
-//       id: 1,
-//       title: "Expand your horizons with Most Of education",
-//       category: "Category",
-//       comments: 0,
-//     },
-//     {
-//       id: 2,
-//       title: "Invest in education invest in yourself Best",
-//       category: "Category",
-//       comments: 0,
-//     },
-//     {
-//       id: 3,
-//       title: "Empower yourself through learning",
-//       category: "Category",
-//       comments: 0,
-//     },
-//   ];
-
-//   return (
-//     <div className="max-w-7xl mx-auto p-8">
-//       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-//         {/* Left Section: Blog Post */}
-//         <div className="lg:col-span-2">
-//           {/* Top Section */}
-//           <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-//             <h1 className="text-3xl font-semibold text-green-500 mb-4">99</h1>
-//             <p className="text-gray-600">
-//               Lorem Ipsum is simply dummy text of the printing and typesetting
-//               industry. Lorem Ipsum has been the industry's standard dummy text
-//               ever since the 1500s, when an unknown printer took a galley of
-//               type and scrambled it.
-//             </p>
-//             <p className="font-bold mt-4">Fahad Hossain_</p>
-//           </div>
-
-//           {/* Image Section */}
-//           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8">
-//             {/* Image 1 */}
-//             <img
-//               src="https://via.placeholder.com/400x300"
-//               alt="Children Playing"
-//               className="rounded-lg shadow-lg w-full"
-//             />
-
-//             {/* Image 2 */}
-//             <img
-//               src="https://via.placeholder.com/400x300"
-//               alt="Children Learning"
-//               className="rounded-lg shadow-lg w-full"
-//             />
-//           </div>
-
-//           {/* Bottom Section with Icons */}
-//           <div className="mt-8">
-//             <p className="text-gray-600">
-//               Aliquam eros justo, posuere loborti viverra laoreet mattis
-//               ullamcorper posuere viverra. Aliquam eros justo, posuere loborti
-//               viverra laoreet augue mattis fermentum ullamcorper posuere viverra.
-//             </p>
-
-//             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
-//               <div className="flex items-center">
-//                 <i className="fas fa-check-circle text-green-500 mr-2"></i>
-//                 <span className="text-gray-700">
-//                   Knowledge is the key education is the door
-//                 </span>
-//               </div>
-//               <div className="flex items-center">
-//                 <i className="fas fa-check-circle text-pink-500 mr-2"></i>
-//                 <span className="text-gray-700">
-//                   Discover the power of education
-//                 </span>
-//               </div>
-//               <div className="flex items-center">
-//                 <i className="fas fa-check-circle text-yellow-500 mr-2"></i>
-//                 <span className="text-gray-700">
-//                   Education opens doors to opportunities, fosters growth
-//                 </span>
-//               </div>
-//               <div className="flex items-center">
-//                 <i className="fas fa-check-circle text-blue-500 mr-2"></i>
-//                 <span className="text-gray-700">
-//                   Expand your horizons with education
-//                 </span>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-
-//         {/* Right Section: Category and Recent Posts */}
-//         <div className="space-y-8">
-//           {/* Category Section */}
-//           <div className="bg-white p-6 rounded-lg shadow-lg">
-//             <h3 className="text-xl font-bold mb-4">Categories</h3>
-//             <ul className="space-y-4">
-//               {categories.map((category, index) => (
-//                 <li key={index}>
-//                   <a
-//                     href={category.link}
-//                     className="flex justify-between items-center border border-gray-300 p-4 rounded-lg hover:bg-green-100 hover:text-green-600 transition duration-300 ease-in-out"
-//                   >
-//                     <span className="text-gray-700 font-medium">
-//                       {category.name}
-//                     </span>
-//                     <span className="text-gray-500">{category.count}</span>
-//                   </a>
-//                 </li>
-//               ))}
-//             </ul>
-//           </div>
-
-//           {/* Recent Posts Section */}
-//           <div className="bg-white p-6 rounded-lg shadow-md">
-//             <h2 className="text-xl font-semibold mb-4">Recent Posts</h2>
-//             <div className="space-y-4">
-//               {posts.map((post) => (
-//                 <a
-//                   key={post.id}
-//                   href="#"
-//                   className="block p-4 bg-white shadow-md rounded-md hover:bg-gray-50 transition-colors duration-300"
-//                 >
-//                   <div className="text-sm text-gray-600 flex justify-between items-center mb-2">
-//                     <span>{post.category}</span>
-//                     <span>Comments {post.comments}</span>
-//                   </div>
-//                   <h3 className="text-lg font-semibold text-black">
-//                     {post.title}
-//                   </h3>
-//                 </a>
-//               ))}
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default BlogD2;
-
-
 import React from 'react';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
@@ -207,12 +52,12 @@ const BlogD2 = () => {
         {/* Image Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8">
           <img
-            src="https://via.placeholder.com/400x300"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNLQbcpuuoy30XtrRF4HWxjYFHd5nhoudh-w&s"
             alt="Children Playing"
             className="rounded-lg shadow-lg w-full"
           />
           <img
-            src="https://via.placeholder.com/400x300"
+            src="https://img.freepik.com/premium-photo/young-woman-teacher-teaches-lesson-class-teenage-children-teacher-stands-near-school-desk-with-girl-student-checks-knowledge-education-school-college-teaching-concept_116407-12192.jpg"
             alt="Children Learning"
             className="rounded-lg shadow-lg w-full"
           />

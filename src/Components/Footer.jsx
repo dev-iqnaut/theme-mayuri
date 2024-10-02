@@ -54,13 +54,18 @@ const Footer = () => {
 
       {/* Bottom part */}
       <div className="container mx-auto mt-6 text-center border-t pt-4 text-gray-600 text-sm">
-        © Yoursitename 2024 | All Rights Reserved
-        <div className="mt-1">
-          <a href=" " className="hover:text-green-600 mx-2">Terms & Conditions</a>|
-          <a href=" " className="hover:text-green-600 mx-2">Privacy Policy</a>|
-          <a href=" " className="hover:text-green-600 mx-2">Contact Us</a>
-        </div>
-      </div>
+  <div className="flex justify-center items-center">
+    © Yoursitename 2024 | All Rights Reserved
+    <div className="flex ml-4 space-x-2">
+      <a href=" " className="hover:text-green-600 mx-2">Terms & Conditions</a>
+      <span>|</span>
+      <a href=" " className="hover:text-green-600 mx-2">Privacy Policy</a>
+      <span>|</span>
+      <a href=" " className="hover:text-green-600 mx-2">Contact Us</a>
+    </div>
+  </div>
+</div>
+
     </footer>
   );
 };
