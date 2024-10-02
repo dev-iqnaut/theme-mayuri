@@ -59,4 +59,3 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
-S

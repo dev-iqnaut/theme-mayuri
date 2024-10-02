@@ -4,9 +4,12 @@ import { AiOutlineUser, AiOutlineCheck, AiOutlineTeam, AiOutlineUnorderedList } 
 
 const StatsSection = () => {
   return (
-    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '30px 20px', backgroundColor: '#ffffff' }}>
+    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '30px 20px', backgroundColor: '#ffffff', }}>
       <div style={{ textAlign: 'left', flex: 1 }}>
-        <h2>Invest in education, invest in the future</h2>
+      <span className="italic text-sky-500 p-8">NUMBER TALKS</span>
+
+      <h2><strong>Invest in education, invest in the future</strong></h2>
+
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum, odio?</p>
         <Button variant="contained" color="primary" style={{ marginTop: '10px' }}>
           Get a Quote
@@ -17,7 +20,8 @@ const StatsSection = () => {
           display: 'grid', 
           gridTemplateColumns: 'repeat(2, 1fr)', // Two columns
           gap: '10px', // Smaller space between boxes
-          flex: 1 
+          flex: 1 ,
+          
         }}>
         {/* Stats Boxes */}
         <div style={{ ...compactBoxStyle }}>

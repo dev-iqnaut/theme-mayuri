@@ -44,11 +44,7 @@ const Home = () => {
      
      
      
-     
-     
-     <BlogD1/>
-     
-     <ServiceDetails2/>
+    
      
     </div>
   );

@@ -2,11 +2,11 @@ import React from 'react';
 
 const EducationSection = () => {
   return (
-    <div className="container mx-auto p-6 flex flex-col md:flex-row justify-between items-center">
+    <div className="container mx-auto p-6 flex flex-col md:flex-row justify-between items-center px-28">
       {/* Left Side: Text Content */}
       <div className="md:w-1/2 text-left mr-6">
         <h2 className="text-sky-400 italic text-lg mb-2">
-          Student College
+          Student Knowledge
         </h2>
         <h3 className="text-lg font-semibold mb-4">
           Knowledge for All: Learning Excellence for Everyone

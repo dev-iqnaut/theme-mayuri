@@ -2,7 +2,7 @@ import React from 'react';
 
 const PricingPlans = () => {
   return (
-    <section className="py-12 px-10"> {/* Adjusted left and right padding */}
+    <section className="py-12 px-28"> {/* Adjusted left and right padding */}
       {/* Section heading */}
       <div className="text-center mb-12">
         <h4 className="text-lg text-blue-500">Our Pricing</h4>

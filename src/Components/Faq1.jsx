@@ -135,7 +135,7 @@ const FAQSection = () => {
         />
         {/* Vertically aligned circles */}
         <div className="absolute bottom-3 right-0 bg-green-200 w-32 h-32 rounded-full -z-7" />
-        <div className="absolute top-10 right-0 bg-green-200 w-32 h-32 rounded-full -z-10" />
+        <div className="absolute top-10 right-0 bg-pink-200 w-32 h-32 rounded-full -z-10" />
       </div>
 
       {/* Right FAQ Section */}
