@@ -1,24 +1,24 @@
 
 import React from 'react';
-import Navbar from './Navbar';
-import Footer from './Footer';
-import AboutSection1 from './AboutSec1';
 import Abt from './Abt';
+import AboutSection from './AboutSec1';
 import PricingPlans from './PricePlans';
-import Testimonial from './Testimonial';
-import StayConnected from './StayCoonected';
+import Testimonial from '../Home/Testimonial';
+import StayConnected from '../StayCoonected';
+import Footer from '../Footer';
+// import Navbar from './Navbar';
+
 
 
 const About = () => {
   return (
     <div>
-     <Navbar/>
+     {/* <Navbar/> */}
      <Abt/>
-     <AboutSection1/>
+     <AboutSection/>
      <PricingPlans/>
      <Testimonial/>
      <StayConnected/>
-    
      <Footer/>
     </div>
   );

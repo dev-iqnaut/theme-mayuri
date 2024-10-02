@@ -1,22 +1,17 @@
 
 import React from 'react';
-import Navbar from './Navbar';
-import StatsSection from './StateSection';
-import Footer from './Footer';
-import EducationSection from './EducationSection';
-import HeroSection from './HeroSection';
-import FacultyCard from './Faculty';
-import EducationalPrograms from './EducationProgram';
-
-import FAQSection from './Faq1';
-
-
-import BlogD1 from './BlogD1';
-import ConnectedH from './ConnectedH';
+import BlogSection from './BlogSectionH';
 import Testimonial from './Testimonial';
+import EducationSection from './EducationSection';
+import FacultyCard from './Faculty';
+import AboutSection from '../About/AboutSec1';
+import EducationalPrograms from './EducationProgram';
+import PortfolioSection from './Profilesection';
 import LatestService from './LatestService';
-import ServiceDetails2 from './ServiceDetails2';
-import AboutSection from './AboutSec1';
+import FAQSection from '../FAQ/Faq1';
+import HeroSection from './HeroSection';
+import StatsSection from './Statsection';
+// import Navbar from './Navbar';
 
 
 // import Introduction from './introduction';
@@ -25,18 +20,22 @@ import AboutSection from './AboutSec1';
 const Home = () => {
   return (
     <div>
-     <Navbar/>
+     {/* <Navbar/> */}
+     {/* <HeroSection/>
+     <StatsSection/> */}
      <HeroSection/>
      <StatsSection/>
      <AboutSection/>
-     <EducationalPrograms/>
+    <EducationalPrograms/>
+     <PortfolioSection/>
      <LatestService/>
-     <FAQSection/>
+   <FAQSection/>
      <FacultyCard/>
      <EducationSection/>
-     <Testimonial/>
-     <ConnectedH/>
-     <Footer/>
+    <BlogSection/>
+    <Testimonial/>
+     
+    
 
 
 
