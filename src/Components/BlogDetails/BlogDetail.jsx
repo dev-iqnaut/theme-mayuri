@@ -10,7 +10,7 @@ import BlogD2 from './BlogD2';
 
 const BlogDetails= () => {
   return (
-    <div>
+    <div className='pt-28'>
     
      <Abt/>
      <BlogD1/>

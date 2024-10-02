@@ -88,10 +88,10 @@ const Abt = () => {
         return 'Blog';
       case '/BlogDetails':
         return 'Blog Details';
-      case '/payroll-dashboard':
-        return 'Payroll Dashboard';
-      case '/payroll-report':
-        return 'Payroll Report';
+      case '/ServiceDetails':
+        return 'Service Details';
+      case '/Service':
+        return 'Service';
       case '/department-management':
         return 'Department';
       case '/performance-management':

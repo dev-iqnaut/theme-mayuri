@@ -10,7 +10,7 @@ import Abt from '../About/Abt';
 
 const Service = () => {
   return (
-    <div>
+    <div className='pt-28'>
     
      <Abt/>
      <ServiceM/>

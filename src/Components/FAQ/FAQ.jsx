@@ -8,7 +8,7 @@ import Abt from '../About/Abt';
 
 const FAQ = () => {
   return (
-    <div>
+    <div className='pt-28'>
       <Abt/>
    <FAQSection/>
      

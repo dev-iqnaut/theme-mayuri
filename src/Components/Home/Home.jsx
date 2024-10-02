@@ -20,7 +20,7 @@ import ConnectedH from '../ConnectedH';
 
 const Home = () => {
   return (
-    <div>
+    <div className='pt-28'>
      {/* <Navbar/> */}
      {/* <HeroSection/>
      <StatsSection/> */}

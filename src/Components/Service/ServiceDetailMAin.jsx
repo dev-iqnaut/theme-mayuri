@@ -10,7 +10,7 @@ import StayConnected from '../StayCoonected';
 
 const ServiceDetail = () => {
   return (
-    <div>
+    <div className='pt-28'>
      
      <Abt/>
      

@@ -9,7 +9,7 @@ import StayConnected from '../StayCoonected';
 
 const Blog = () => {
   return (
-    <div>
+    <div className='pt-28'>
      
      <Abt/>
      <BlogD1/>

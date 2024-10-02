@@ -9,7 +9,7 @@ import ContactSection2 from './Contact2';
 
 const Contact = () => {
   return (
-    <div>
+    <div className='pt-28'>
     
      <Abt/>
      <ContactSection/>
