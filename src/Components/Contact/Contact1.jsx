@@ -48,7 +48,7 @@ const ContactSection = () => {
       {/* Map Section */}
       <div className="w-full h-64 mt-8">
         <img
-          src="" // Replace with actual map image or Google Maps embed
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9YgIQjVoqqUpsZlTVRkVxsL0omE2X_X0U_g&s" // Replace with actual map image or Google Maps embed
           alt="Map"
           className="w-full h-full object-cover"
         />

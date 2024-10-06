@@ -58,7 +58,7 @@ const Footer = () => {
       {/* Bottom part */}
       <div className="container mx-auto mt-6 text-center border-t pt-4 text-black text-sm">
   <div className="flex justify-center items-center">
-    © Yoursitename 2024 | All Rights Reserved
+    © Created by Mayuri Raghunath Mahadik 2024 | All Rights Reserved
     <div className="flex ml-4 space-x-2">
       <a href=" " className="hover:text-green-600 mx-2">Terms & Conditions</a>
       <span>|</span>
