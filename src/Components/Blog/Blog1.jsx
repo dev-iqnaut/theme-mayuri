@@ -1,16 +1,10 @@
 
 
-
-
-
-
-
-
-
 // import React from "react";
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faCalendarAlt, faUser, faComments } from '@fortawesome/free-solid-svg-icons';
 
 // const Blog1 = () => {
-
 //   const categories = [
 //     { name: 'EduTech Solutions', count: '01', link: '/edutech-solutions' },
 //     { name: 'SmartAcademy', count: '07', link: '/smartacademy' },
@@ -44,18 +38,56 @@
 //     <div className="max-w-7xl mx-auto p-8">
 //       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
 //         {/* Left Section: Blog Content */}
-//         <div className="lg:col-span-2">
-//           {/* Featured Image */}
+//         <div className="lg:col-span-2 space-y-8">
+//           {/* First Featured Image */}
 //           <img
-//             src="https://via.placeholder.com/600x400"
-//             alt="Featured"
+//             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwwumYRWT-HL0yM84f0NpSmI8eskIj_7f0lw&s"
+//             alt="First Featured"
 //             className="rounded-lg shadow-lg"
 //           />
+//             <div className="mt-6">
+//             <h2 className="text-2xl font-bold">
+//             Invest in education, invest in yourself: Education through learning
+//             </h2>
+//             <p className="mt-4 text-gray-600">
+//               It is a long established fact that a reader will be distracted by the readable content.
+//             </p>
+            
+//             {/* Read More Button */}
+//             <button className="mt-4 bg-teal-500 text-white py-2 px-4 rounded-md hover:bg-teal-600 transition">
+//               Read More
+//             </button>
+//           </div>
+
           
+          
+
+//           <div className="mt-6 flex space-x-4 text-gray-500">
+//   <span className="flex items-center">
+//     <FontAwesomeIcon icon={faCalendarAlt} className="mr-2" />
+//     January 19, 2024
+//   </span>
+//   <span className="flex items-center">
+//     <FontAwesomeIcon icon={faUser} className="mr-2" />
+//     By admin
+//   </span>
+//   <span className="flex items-center">
+//     <FontAwesomeIcon icon={faComments} className="mr-2" />
+//     Comments (05)
+//   </span>
+// </div>
+
+//           {/* Second Featured Image */}
+//           <img
+//             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3NNCVPVGlZSZOmW4NvWIA95Swam1Yeji0nA&s"
+//             alt="Second Featured"
+//             className="rounded-lg shadow-lg"
+//           />
+
 //           {/* Text Section */}
 //           <div className="mt-6">
 //             <h2 className="text-2xl font-bold">
-//               Unlock your potential with education: Grow and succeed through learning.
+//             The gateway to a brighter future: Learn, grow, and succeed with education
 //             </h2>
 //             <p className="mt-4 text-gray-600">
 //               It is a long established fact that a reader will be distracted by the readable content.
@@ -68,21 +100,23 @@
 //           </div>
 
 //           {/* Metadata */}
+          
 //           <div className="mt-6 flex space-x-4 text-gray-500">
-//             <span className="flex items-center">
-//               <i className="fas fa-calendar-alt mr-2"></i>
-//               January 19, 2024
-//             </span>
-//             <span className="flex items-center">
-//               <i className="fas fa-user mr-2"></i>
-//               By admin
-//             </span>
-//             <span className="flex items-center">
-//               <i className="fas fa-comments mr-2"></i>
-//               Comments (05)
-//             </span>
-//           </div>
+//   <span className="flex items-center">
+//     <FontAwesomeIcon icon={faCalendarAlt} className="mr-2" />
+//     January 19, 2024
+//   </span>
+//   <span className="flex items-center">
+//     <FontAwesomeIcon icon={faUser} className="mr-2" />
+//     By admin
+//   </span>
+//   <span className="flex items-center">
+//     <FontAwesomeIcon icon={faComments} className="mr-2" />
+//     Comments (05)
+//   </span>
+// </div>
 //         </div>
+
 
 //         {/* Right Section: Sidebar */}
 //         <div className="lg:col-span-1 space-y-8">
@@ -156,15 +190,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendarAlt, faUser, faComments } from '@fortawesome/free-solid-svg-icons';
@@ -200,7 +225,7 @@ const Blog1 = () => {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto p-8">
+    <div className="max-w-7xl mx-auto p-6 sm:p-8">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Left Section: Blog Content */}
         <div className="lg:col-span-2 space-y-8">
@@ -208,56 +233,51 @@ const Blog1 = () => {
           <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwwumYRWT-HL0yM84f0NpSmI8eskIj_7f0lw&s"
             alt="First Featured"
-            className="rounded-lg shadow-lg"
+            className="rounded-lg shadow-lg w-full h-auto"
           />
-            <div className="mt-6">
+          <div className="mt-6">
             <h2 className="text-2xl font-bold">
-            Invest in education, invest in yourself: Education through learning
+              Invest in education, invest in yourself: Education through learning
             </h2>
             <p className="mt-4 text-gray-600">
               It is a long established fact that a reader will be distracted by the readable content.
             </p>
-            
             {/* Read More Button */}
             <button className="mt-4 bg-teal-500 text-white py-2 px-4 rounded-md hover:bg-teal-600 transition">
               Read More
             </button>
           </div>
 
-          
-          
-
           <div className="mt-6 flex space-x-4 text-gray-500">
-  <span className="flex items-center">
-    <FontAwesomeIcon icon={faCalendarAlt} className="mr-2" />
-    January 19, 2024
-  </span>
-  <span className="flex items-center">
-    <FontAwesomeIcon icon={faUser} className="mr-2" />
-    By admin
-  </span>
-  <span className="flex items-center">
-    <FontAwesomeIcon icon={faComments} className="mr-2" />
-    Comments (05)
-  </span>
-</div>
+            <span className="flex items-center">
+              <FontAwesomeIcon icon={faCalendarAlt} className="mr-2" />
+              January 19, 2024
+            </span>
+            <span className="flex items-center">
+              <FontAwesomeIcon icon={faUser} className="mr-2" />
+              By admin
+            </span>
+            <span className="flex items-center">
+              <FontAwesomeIcon icon={faComments} className="mr-2" />
+              Comments (05)
+            </span>
+          </div>
 
           {/* Second Featured Image */}
           <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3NNCVPVGlZSZOmW4NvWIA95Swam1Yeji0nA&s"
             alt="Second Featured"
-            className="rounded-lg shadow-lg"
+            className="rounded-lg shadow-lg w-full h-auto"
           />
 
           {/* Text Section */}
           <div className="mt-6">
             <h2 className="text-2xl font-bold">
-            The gateway to a brighter future: Learn, grow, and succeed with education
+              The gateway to a brighter future: Learn, grow, and succeed with education
             </h2>
             <p className="mt-4 text-gray-600">
               It is a long established fact that a reader will be distracted by the readable content.
             </p>
-            
             {/* Read More Button */}
             <button className="mt-4 bg-teal-500 text-white py-2 px-4 rounded-md hover:bg-teal-600 transition">
               Read More
@@ -265,23 +285,21 @@ const Blog1 = () => {
           </div>
 
           {/* Metadata */}
-          
           <div className="mt-6 flex space-x-4 text-gray-500">
-  <span className="flex items-center">
-    <FontAwesomeIcon icon={faCalendarAlt} className="mr-2" />
-    January 19, 2024
-  </span>
-  <span className="flex items-center">
-    <FontAwesomeIcon icon={faUser} className="mr-2" />
-    By admin
-  </span>
-  <span className="flex items-center">
-    <FontAwesomeIcon icon={faComments} className="mr-2" />
-    Comments (05)
-  </span>
-</div>
+            <span className="flex items-center">
+              <FontAwesomeIcon icon={faCalendarAlt} className="mr-2" />
+              January 19, 2024
+            </span>
+            <span className="flex items-center">
+              <FontAwesomeIcon icon={faUser} className="mr-2" />
+              By admin
+            </span>
+            <span className="flex items-center">
+              <FontAwesomeIcon icon={faComments} className="mr-2" />
+              Comments (05)
+            </span>
+          </div>
         </div>
-
 
         {/* Right Section: Sidebar */}
         <div className="lg:col-span-1 space-y-8">

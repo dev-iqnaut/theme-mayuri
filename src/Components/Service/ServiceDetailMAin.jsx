@@ -1,9 +1,10 @@
 
 import React from 'react';
 import Abt from '../About/Abt';
-import ServiceDetails1 from './ServiceDetails';
+
 import ServiceDetails2 from './ServiceDetails2';
 import StayConnected from '../StayCoonected';
+import ServiceDetails1 from './ServiceD1';
 
 
 

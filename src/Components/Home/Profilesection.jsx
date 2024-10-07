@@ -71,12 +71,7 @@ const PortfolioSection = () => {
             ))}
         </div>
 
-        {/* Next Button */}
-        <div className="flex justify-start mt-4">
-          <button className="p-2 bg-orange-500 text-white rounded-full hover:bg-orange-600">
-            →
-          </button>
-        </div>
+        
       </div>
     </div>
   );
