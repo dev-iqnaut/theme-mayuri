@@ -1,5 +1,4 @@
 
-
 // import React from 'react';
 // import { Button } from '@mui/material'; // Assuming you're using Material UI for the button
 // import { useTheme } from '@mui/material/styles';
@@ -88,15 +87,81 @@
 // export default HeroSection;
 
 
-import React from 'react';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import React, { useEffect, useState } from 'react';
 import { Button } from '@mui/material'; // Assuming you're using Material UI for the button
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import { doc, getDoc } from 'firebase/firestore';
+import { db } from "../firebaseConfig"; // Adjust the path as necessary
 
 const HeroSection = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm')); // Mobile check using MUI breakpoints
 
+  // States for vision, mission, loading, and error handling
+  const [vision, setVision] = useState(null);
+  const [mission, setMission] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchAboutData = async () => {
+      try {
+        console.log("Fetching about data...");
+        const docRef = doc(db, "sites", "www.ascentm.in");
+        const docSnap = await getDoc(docRef);
+
+        if (docSnap.exists()) {
+          console.log("Document fetched successfully:", docSnap.data());
+
+          const siteData = docSnap.data().siteData;
+          console.log("Site Data fetched:", siteData); // Log the entire siteData
+
+          // Ensure that siteData and "About-Us" exist
+          if (siteData && siteData["About-Us"]) {
+            const aboutUsData = siteData["About-Us".trim()];
+            setVision(aboutUsData.vision); // Set the vision data
+            setMission(aboutUsData.mission); // Set the mission data
+            console.log("About data set:", aboutUsData); // Log the About-Us data
+          } else {
+            console.error("About-Us data not found in siteData");
+            setError("About-Us data not found.");
+          }
+        } else {
+          throw new Error("No such document!");
+        }
+      } catch (err) {
+        console.error("Detailed error fetching about data:", err);
+        setError(err.message || "Error fetching about data.");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchAboutData();
+  }, []);
+
+  if (loading) return <p>Loading...</p>;
+
+  if (error) {
+    return <p>Error: {error}</p>;
+  }
+
+  // Rendering Hero Section
   return (
     <div 
       style={{ 
@@ -106,7 +171,7 @@ const HeroSection = () => {
         position: 'relative' 
       }}
     >
-      {/* Image on the upper right side with a subtle hover effect */}
+      {/* Static Image on the upper right side */}
       <img 
         src="https://media.istockphoto.com/id/1372481295/photo/photo-of-school-boy-wear-yellow-t-shirt-backpack-in-background-stock-photo.jpg?s=612x612&w=0&k=20&c=lRsVHozgtzpj9W6ZjEW2g2qTkh4iV4BLePFgvUt7kvE=" 
         alt="Child with Books" 
@@ -124,7 +189,7 @@ const HeroSection = () => {
         onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
       />
 
-      {/* Image on the lower left side with a subtle hover effect */}
+      {/* Static Image on the lower left side */}
       <img 
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfaqCi1T3heLoU5ZOtQ13EcjeLh4xcS8tboQ&s" 
         alt="Child Flexing" 
@@ -142,6 +207,7 @@ const HeroSection = () => {
         onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
       />
       
+      {/* Heading */}
       <h1 
         style={{ 
           fontSize: isMobile ? '2rem' : '3rem', // Adjust font size for mobile
@@ -157,11 +223,13 @@ const HeroSection = () => {
         Elementary School
       </h1>
 
-      <p style={{ fontSize: isMobile ? '0.9rem' : '1rem' }}> {/* Smaller text for mobile */}
-        Starting a corporate business typically involves several steps, <br/> 
-        such as developing a business plan.
+      {/* Dynamic Vision and Mission Text */}
+      <p style={{ fontSize: isMobile ? '0.9rem' : '1rem' }}> {/* Adjust font size for mobile */}
+        {mission} <br/> 
+        {vision}
       </p>
       
+      {/* Button */}
       <Button 
         variant="contained" 
         color="success" 

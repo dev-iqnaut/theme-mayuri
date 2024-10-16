@@ -73,14 +73,115 @@
 
 
 
+// import React, { useEffect, useState } from "react";
+// import { doc, getDoc } from "firebase/firestore";
+// import { db } from "../firebaseConfig"; // Adjust the path as necessary
 
+// const ContactUsSection = () => {
+//   const [contactData, setContactData] = useState(null);
+//   const [loading, setLoading] = useState(true);
+//   const [error, setError] = useState(null);
 
+//   useEffect(() => {
+//     const fetchContactData = async () => {
+//       try {
+//         console.log("Fetching contact data...");
+//         const docRef = doc(db, "sites", "www.ascentm.in");
+//         const docSnap = await getDoc(docRef);
 
+//         if (docSnap.exists()) {
+//           console.log("Document fetched successfully:", docSnap.data());
 
+//           const siteData = docSnap.data().siteData;
+//           console.log("Site Data fetched:", siteData); // Log the entire siteData
 
+//           // Ensure that siteData and "ContactUs" exist
+//           if (siteData && siteData["ContactUs"]) {
+//             setContactData(siteData["ContactUs"]); // Access the "ContactUs" field
+//             console.log("Contact data set:", siteData["ContactUs"]); // Log the ContactUs data
+//           } else {
+//             console.error("Contact-Us data not found in siteData");
+//             setError("Contact-Us data not found.");
+//           }
+//         } else {
+//           throw new Error("No such document!");
+//         }
+//       } catch (err) {
+//         console.error("Detailed error fetching contact data:", err);
+//         setError(err.message || "Error fetching contact data.");
+//       } finally {
+//         setLoading(false);
+//       }
+//     };
 
+//     fetchContactData();
+//   }, []);
 
+//   if (loading) return <p>Loading...</p>;
 
+//   if (error) {
+//     return <p>Error: {error}</p>;
+//   }
+
+//   // Check if contactData is set correctly
+//   console.log("Rendering contactData:", contactData);
+
+//   return (
+//     <div>
+//       <h1>Contact Us</h1>
+//       {contactData ? (
+//         <div>
+//           <h2>Email</h2>
+//           <p>{contactData.email || "Email not available."}</p>
+
+//           <h2>Facebook</h2>
+//           {contactData.facebook_link ? (
+//             <p>
+//               Join us on Facebook:{" "}
+//               <a href={contactData.facebook_link} target="_blank" rel="noopener noreferrer">
+//                 {contactData.facebook_link}
+//               </a>
+//             </p>
+//           ) : (
+//             <p>Facebook link not available.</p>
+//           )}
+
+//           <h2>LinkedIn</h2>
+//           {contactData.linkedin_link ? (
+//             <p>
+//               Join us on LinkedIn:{" "}
+//               <a href={contactData.linkedin_link} target="_blank" rel="noopener noreferrer">
+//                 {contactData.linkedin_link}
+//               </a>
+//             </p>
+//           ) : (
+//             <p>LinkedIn link not available.</p>
+//           )}
+
+//           <h2>Location</h2>
+//           {contactData.map ? (
+//             <iframe
+//               src={contactData.map}
+//               width="600"
+//               height="450"
+//               style={{ border: 0 }}
+//               allowFullScreen=""
+//               loading="lazy"
+//               referrerPolicy="no-referrer-when-downgrade"
+//               title="Google Maps"
+//             ></iframe>
+//           ) : (
+//             <p>Map not available.</p>
+//           )}
+//         </div>
+//       ) : (
+//         <p>No contact data available.</p>
+//       )}
+//     </div>
+//   );
+// };
+
+// export default ContactUsSection;
 
 
 
@@ -89,37 +190,40 @@
 
 import React, { useEffect, useState } from "react";
 import { doc, getDoc } from "firebase/firestore";
-import { db } from "../firebaseConfig"; // Make sure this path is correct
+import { db } from "../firebaseConfig"; // Adjust the path as necessary
 
-const ContactSection = () => {
+const ContactUsSection = () => {
   const [contactData, setContactData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [diagnosticInfo, setDiagnosticInfo] = useState(null);
 
   useEffect(() => {
     const fetchContactData = async () => {
       try {
+        console.log("Fetching contact data...");
         const docRef = doc(db, "sites", "www.ascentm.in");
-        console.log("Attempting to fetch document:", docRef.path);
-
         const docSnap = await getDoc(docRef);
 
         if (docSnap.exists()) {
-          const contactUsData = docSnap.data().ContactUs;
-          setContactData(contactUsData);
-          console.log("Fetched data:", contactUsData);
+          console.log("Document fetched successfully:", docSnap.data());
+
+          const siteData = docSnap.data().siteData;
+          console.log("Site Data fetched:", siteData); // Log the entire siteData
+
+          // Ensure that siteData and "ContactUs" exist
+          if (siteData && siteData["ContactUs"]) {
+            setContactData(siteData["ContactUs"]); // Access the "ContactUs" field
+            console.log("Contact data set:", siteData["ContactUs"]); // Log the ContactUs data
+          } else {
+            console.error("Contact-Us data not found in siteData");
+            setError("Contact-Us data not found.");
+          }
         } else {
           throw new Error("No such document!");
         }
       } catch (err) {
-        console.error("Error fetching contact data:", err);
+        console.error("Detailed error fetching contact data:", err);
         setError(err.message || "Error fetching contact data.");
-        setDiagnosticInfo({
-          errorCode: err.code,
-          errorName: err.name,
-          fullErrorMessage: err.toString(),
-        });
       } finally {
         setLoading(false);
       }
@@ -131,17 +235,7 @@ const ContactSection = () => {
   if (loading) return <p>Loading...</p>;
 
   if (error) {
-    return (
-      <div>
-        <p>Error: {error}</p>
-        {diagnosticInfo && (
-          <details>
-            <summary>Diagnostic Information</summary>
-            <pre>{JSON.stringify(diagnosticInfo, null, 2)}</pre>
-          </details>
-        )}
-      </div>
-    );
+    return <p>Error: {error}</p>;
   }
 
   return (
@@ -149,19 +243,53 @@ const ContactSection = () => {
       <h1>Contact Us</h1>
       {contactData ? (
         <div>
-          <p>Email: {contactData.email}</p>
-          <p>Location: {contactData.location}</p>
-          <p>Phone: {contactData.phone_number}</p>
-          <p>Opening Hours: {contactData.opening_hours}</p>
-          <p>
-            Facebook: <a href={contactData.facebook_link}>{contactData.facebook_link}</a>
-          </p>
-          <p>
-            LinkedIn: <a href={contactData.linkedin_link}>{contactData.linkedin_link}</a>
-          </p>
-          <p>
-            Twitter: <a href={contactData.twitter_link}>{contactData.twitter_link}</a>
-          </p>
+          <h2>Email</h2>
+          <p>{contactData.email || "Email not available."}</p>
+
+          <h2>Phone Number</h2>
+          <p>{contactData.phone_number || "Phone number not available."}</p>
+
+          <h2>Location</h2>
+          <p>{contactData.location || "Location not available."}</p>
+
+          <h2>Opening Hours</h2>
+          <p>{contactData.opening_hours ? `${contactData.opening_hours} AM` : "Opening hours not available."}</p>
+
+          <h2>Facebook</h2>
+          {contactData.facebook_link ? (
+            <p>
+              Join us on Facebook:{" "}
+              <a href={contactData.facebook_link} target="_blank" rel="noopener noreferrer">
+                {contactData.facebook_link}
+              </a>
+            </p>
+          ) : (
+            <p>Facebook link not available.</p>
+          )}
+
+          <h2>LinkedIn</h2>
+          {contactData.linkedin_link ? (
+            <p>
+              Join us on LinkedIn:{" "}
+              <a href={contactData.linkedin_link} target="_blank" rel="noopener noreferrer">
+                {contactData.linkedin_link}
+              </a>
+            </p>
+          ) : (
+            <p>LinkedIn link not available.</p>
+          )}
+
+          <h2>Twitter</h2>
+          {contactData.twitter_link ? (
+            <p>
+              Follow us on Twitter:{" "}
+              <a href={contactData.twitter_link} target="_blank" rel="noopener noreferrer">
+                {contactData.twitter_link}
+              </a>
+            </p>
+          ) : (
+            <p>Twitter link not available.</p>
+          )}
         </div>
       ) : (
         <p>No contact data available.</p>
@@ -170,4 +298,4 @@ const ContactSection = () => {
   );
 };
 
-export default ContactSection;
+export default ContactUsSection;
