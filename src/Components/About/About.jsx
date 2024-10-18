@@ -5,7 +5,7 @@ import AboutSection from './AboutSec1';
 import PricingPlans from './PricePlans';
 import Testimonial from '../Home/Testimonial';
 import StayConnected from '../StayCoonected';
-import AboutUsSection2 from './try';
+
 
 // import Navbar from './Navbar';
 
@@ -16,7 +16,8 @@ const About = () => {
     <div className='pt-28'>
      {/* <Navbar/> */}
      <Abt/>
-     <AboutUsSection2/>
+     
+    
      <AboutSection/>
      <PricingPlans/>
      <Testimonial/>
