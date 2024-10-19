@@ -50,7 +50,7 @@ const NewsEventsSection = () => {
   }
 
   return (
-    <section className="py-24 bg-gray-100">
+    <section className="py-36 bg-gray-100">
       <div className="container mx-auto px-6 md:px-12">
         <h2 className="text-4xl font-extrabold text-center text-teal-600 mb-8 animate-fade-in">
           News and Events

@@ -241,6 +241,14 @@ const Footer = () => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;
 
+
+  const handleSelectChange = (event) => {
+    const selectedValue = event.target.value;
+    if (selectedValue) {
+      window.location.href = selectedValue; // Redirect to selected page
+    }
+  };
+
   return (
     <footer className="bg-teal-600 py-8 border-t px-32">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-start space-y-8 md:space-y-0 p-6 md:p-12">
@@ -283,11 +291,41 @@ const Footer = () => {
         <div className="flex flex-col items-center md:items-start">
           <h4 className="text-lg font-semibold mb-2">Pages</h4>
           <ul className="space-y-1 text-black text-sm">
-            <li><a href="#" className="hover:text-white">About Us</a></li>
-            <li><a href="#" className="hover:text-white">Latest Service</a></li>
-            <li><a href="#" className="hover:text-white">Blog & News</a></li>
-            <li><a href="#" className="hover:text-white">FAQ</a></li>
-            <li><a href="#" className="hover:text-white">Our Creative Team</a></li>
+          <li><a href="/" className="hover:text-white">Home</a></li>
+            <li><a href="/about" className="hover:text-white">About Us</a></li>
+            
+<li className="text-gray-700 hover:text-gray-900 transition-colors duration-200">
+                <select className="text-black  rounded bg-teal-600 hover:bg-gray-100" onChange={handleSelectChange}>
+                  <option value="">Academic</option>
+                  <option value="/academic_re">Academic Resources</option>
+                  <option value="/academic">Academic</option>
+                  <option value="/admission">Admission</option>
+                  <option value="/news">News</option>
+                  <option value="/faculty">Faculty</option>
+                  <option value="/gallery">Gallery</option>
+                  <option value="/infrastructure">Infrastructure</option>
+                </select>
+              </li>
+              <li className="text-gray-700 hover:text-gray-900 transition-colors duration-200">
+                <select className="text-black rounded bg-teal-600 hover:bg-gray-100" onChange={handleSelectChange}>
+                  <option value="">Services</option>
+                  <option value="/service">Service</option>
+                  <option value="/serviceDetails">Service Details</option>
+                </select>
+              </li>
+
+              
+              <li className="text-gray-700 hover:text-gray-900 transition-colors duration-200">
+                <select className="text-black rounded bg-teal-600 hover:bg-gray-100" onChange={handleSelectChange}>
+                  <option value="">Blog</option>
+                  <option value="/blog">Blog</option>
+                  <option value="/blogDetails">Blog Details</option>
+                </select>
+              </li>
+
+
+            <li><a href="/faq" className="hover:text-white">FAQ</a></li>
+            <li><a href="/contact" className="hover:text-white">Contact</a></li>
           </ul>
         </div>
 
@@ -314,7 +352,17 @@ const Footer = () => {
       {/* Bottom part */}
       <div className="container mx-auto mt-6 text-center border-t pt-4 text-black text-sm">
         <div className="flex flex-col md:flex-row justify-center items-center md:space-x-4">
-          <span>© Created by Mayuri Raghunath Mahadik 2024 | All Rights Reserved</span>
+        <span>
+      © Created by 
+      <a 
+        href="https://www.linkedin.com/in/mayuri-mahadik-060099279/" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="text-black hover:text-white underline ml-1 transition-colors duration-300">
+        Mayuri Raghunath Mahadik
+      </a> 
+       2024 | All Rights Reserved
+    </span>
           <div className="flex mt-2 md:mt-0 space-x-2">
             <a href="#" className="hover:text-white mx-2">Terms & Conditions</a>
             <span>|</span>

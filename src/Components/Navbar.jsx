@@ -162,9 +162,7 @@ const Navbar = () => {
                   <option value="/serviceDetails">Service Details</option>
                 </select>
               </li>
-              <li className="text-gray-700 hover:text-gray-900 transition-colors duration-200">
-                <Link to="/faq">FAQ</Link>
-              </li>
+             
               <li className="text-gray-700 hover:text-gray-900 transition-colors duration-200">
                 <select className="text-black py-2 px-2 rounded bg-white hover:bg-gray-100" onChange={handleSelectChange}>
                   <option value="">Blog</option>
@@ -172,6 +170,12 @@ const Navbar = () => {
                   <option value="/blogDetails">Blog Details</option>
                 </select>
               </li>
+
+              <li className="text-gray-700 hover:text-gray-900 transition-colors duration-200">
+                <Link to="/faq">FAQ</Link>
+              </li>
+
+
               <li className="text-gray-700 hover:text-gray-900 transition-colors duration-200">
                 <Link to="/contact">Contact</Link>
               </li>
@@ -201,6 +205,20 @@ const Navbar = () => {
               <li className="text-gray-700 hover:text-gray-900 transition-colors duration-200">
                 <Link to="/about" onClick={toggleMenu}>About Us</Link>
               </li>
+
+              <li className="text-gray-700 hover:text-gray-900 transition-colors duration-200">
+                <select className="text-black py-2 px-2 rounded bg-white hover:bg-gray-100" onChange={handleSelectChange}>
+                <option value="">Academic</option>
+                  <option value="/academic_re">Academic Resources</option>
+                  <option value="/academic">Academic</option>
+                  <option value="/admission">Admission</option>
+                  <option value="/news">News</option>
+                  <option value="/faculty">Faculty</option>
+                  <option value="/gallery">Gallery</option>
+                  <option value="/infrastructure">Infrastructure</option>
+                </select>
+              </li>
+
               <li className="text-gray-700 hover:text-gray-900 transition-colors duration-200">
                 <select className="text-black py-2 px-2 rounded bg-white hover:bg-gray-100" onChange={handleSelectChange}>
                   <option value="">Services</option>
@@ -208,9 +226,7 @@ const Navbar = () => {
                   <option value="/serviceDetails">Service Details</option>
                 </select>
               </li>
-              <li className="text-gray-700 hover:text-gray-900 transition-colors duration-200">
-                <Link to="/faq" onClick={toggleMenu}>FAQ</Link>
-              </li>
+             
               <li className="text-gray-700 hover:text-gray-900 transition-colors duration-200">
                 <select className="text-black py-2 px-2 rounded bg-white hover:bg-gray-100" onChange={handleSelectChange}>
                   <option value="">Blog</option>
@@ -218,6 +234,11 @@ const Navbar = () => {
                   <option value="/blogDetails">Blog Details</option>
                 </select>
               </li>
+
+              <li className="text-gray-700 hover:text-gray-900 transition-colors duration-200">
+                <Link to="/faq" onClick={toggleMenu}>FAQ</Link>
+              </li>
+
               <li className="text-gray-700 hover:text-gray-900 transition-colors duration-200">
                 <Link to="/contact" onClick={toggleMenu}>Contact</Link>
               </li>
