@@ -1,8 +1,9 @@
+
 import React from 'react';
 
 const EducationalPrograms = () => {
   return (
-    <section className="py-12 px-28"> {/* Updated padding */}
+    <section className="py-12 px-4 md:px-32"> {/* Updated padding for mobile and desktop */}
       {/* Section heading */}
       <div className="text-center mb-12">
         <h3 className="text-lg font-semibold text-green-500">Educational Programs</h3>

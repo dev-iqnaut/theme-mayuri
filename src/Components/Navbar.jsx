@@ -151,6 +151,7 @@ const Navbar = () => {
                   <option value="/admission">Admission</option>
                   <option value="/news">News</option>
                   <option value="/faculty">Faculty</option>
+                  <option value="/Cbse">CBSE Compliance</option>
                   <option value="/gallery">Gallery</option>
                   <option value="/infrastructure">Infrastructure</option>
                 </select>
@@ -214,6 +215,7 @@ const Navbar = () => {
                   <option value="/admission">Admission</option>
                   <option value="/news">News</option>
                   <option value="/faculty">Faculty</option>
+                  <option value="/cbse">CBSE Compliance</option>
                   <option value="/gallery">Gallery</option>
                   <option value="/infrastructure">Infrastructure</option>
                 </select>

@@ -1,3 +1,6 @@
+
+
+
 import React, { useEffect, useState } from "react";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../firebaseConfig"; // Adjust the path as necessary
@@ -37,20 +40,21 @@ const FacultyStaffSection = () => {
   if (error) return <p className="text-center text-red-600">Error: {error}</p>;
 
   return (
-    <section className="py-16">
-      <div className="container mx-auto px-6 md:px-12">
-        <h1 className="text-5xl font-extrabold text-white mb-12 text-center animate-fade-in">
+    <section className="py-36 bg-gradient-to-b from-pink-200 to-sky-200">
+      <div className="container mx-auto px-6 lg:px-32">
+        <h1 className="text-5xl font-extrabold text-gray-800 text-center mb-12 animate-fade-in">
           Faculty and Staff
         </h1>
 
         {facultyStaffData ? (
           <div className="bg-white shadow-2xl rounded-lg p-8 md:p-16 space-y-12 transition duration-500 transform hover:scale-105 hover:shadow-3xl">
+            {/* Faculty Picture Section */}
             <div className="border-l-4 border-teal-500 pl-6">
               <h2 className="text-3xl font-bold text-teal-600 mb-4">Faculty Picture</h2>
               <img
                 src={facultyStaffData.facultyPicture}
                 alt="Faculty"
-                className="rounded-lg shadow-lg mx-auto max-w-xs"
+                className="rounded-lg shadow-lg mx-auto max-w-xs hover:scale-105 transition-transform duration-500"
               />
             </div>
           </div>
@@ -63,7 +67,4 @@ const FacultyStaffSection = () => {
 };
 
 export default FacultyStaffSection;
-
-
-
 

@@ -23,6 +23,7 @@ import NewsEventsSection from './Components/New/Event';
 import FacultyStaffSection from './Components/New/Faculty';
 import GalleryComponent from './Components/New/Gallery';
 import InfrastructureSection from './Components/New/Infrastructure';
+import CBSEComplianceSection from './Components/New/CBSE';
 
 
 
@@ -53,6 +54,7 @@ function App() {
         <Route path="/Admission" element={<Admissions/>} />
         <Route path="/News" element={<NewsEventsSection/>} />
         <Route path="/Faculty" element={<FacultyStaffSection/>} />
+        <Route path="/Cbse" element={<CBSEComplianceSection/>} />
         <Route path="/Gallery" element={<GalleryComponent/>} />
         <Route path="/Infrastructure" element={<InfrastructureSection/>} />
         

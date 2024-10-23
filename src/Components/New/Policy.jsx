@@ -1,3 +1,6 @@
+
+
+
 import React, { useEffect, useState } from "react";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../firebaseConfig"; // Adjust the path as necessary
@@ -42,7 +45,7 @@ const Policies = () => {
 
   return (
     <section className="bg-gradient-to-br from-teal-500 via-teal-400 to-teal-300 py-16">
-      <div className="container mx-auto px-6 md:px-12">
+      <div className="container mx-auto px-6 lg:px-32 md:px-12">
         <h1 className="text-5xl font-extrabold text-white mb-12 text-center animate-fade-in">
           Policies
         </h1>

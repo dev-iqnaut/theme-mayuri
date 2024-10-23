@@ -1,11 +1,12 @@
+
 import React, { useState } from 'react';
 import lsc2 from '../Assets/LSC2.jpeg';
 import lsc3 from '../Assets/LSC3.jpeg';
 import lsc1 from '../Assets/LSC1.jpeg';
-// Modal component
+
 const Modal = ({ isOpen, onClose, content }) => {
   if (!isOpen) return null;
-  
+
   return (
     <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 p-24">
       <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-lg relative">
@@ -47,7 +48,7 @@ const LatestService = () => {
   };
 
   return (
-    <section className="py-12 px-28">
+    <section className="py-12 px-6 md:px-10 lg:px-32">
       {/* Main container */}
       <div className="flex flex-col lg:flex-row items-start justify-between gap-8">
         

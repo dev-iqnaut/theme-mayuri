@@ -1,3 +1,5 @@
+
+
 import React from 'react';
 
 const Card = ({ title, description, icon }) => {
@@ -27,7 +29,7 @@ const Card = ({ title, description, icon }) => {
 
 const ServiceM = () => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:grid-cols-2 px-12 py-10">
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:grid-cols-2 px-12 py-10 lg:px-32">
       <Card 
         title="Online Class"
         description="Lorem ipsum dolor sit amet consectetur adipiscing elit platea the asf of a proin mollis pretium facilisi in, ligula volutpat."

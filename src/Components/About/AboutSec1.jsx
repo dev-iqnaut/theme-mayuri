@@ -115,6 +115,7 @@ import React, { useEffect, useState } from 'react';
 import About from '../Assets/About.jpeg';
 import { doc, getDoc } from 'firebase/firestore';
 import { db } from '../firebaseConfig'; // Adjust the path as necessary
+import Ten from '../Assets/10th.jpg'
 
 const AboutSection = () => {
   // State to hold fetched data
@@ -208,7 +209,7 @@ const AboutSection = () => {
           <div className="flex flex-col items-center justify-center bg-gray-50 w-32 h-32 rounded-lg shadow-lg">
             <div className="flex-shrink-0">
               <img
-                src="https://example.com/experience-icon.png"
+                src={Ten}
                 alt="Experience Icon"
                 className="h-10 w-10"
               />

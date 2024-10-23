@@ -1,69 +1,4 @@
-// import React, { useEffect, useState } from "react";
-// import { doc, getDoc } from "firebase/firestore";
-// import { db } from "../firebaseConfig"; // Adjust the path as necessary
 
-// const AcademicResources = () => {
-//   const [academicData, setAcademicData] = useState(null);
-//   const [loading, setLoading] = useState(true);
-//   const [error, setError] = useState(null);
-
-//   useEffect(() => {
-//     const fetchAcademicData = async () => {
-//       try {
-//         const docRef = doc(db, "sites", "www.ascentm.in");
-//         const docSnap = await getDoc(docRef);
-
-//         if (docSnap.exists()) {
-//           const siteData = docSnap.data().siteData;
-//           if (siteData && siteData.AcademicResources) {
-//             setAcademicData(siteData.AcademicResources);
-//           } else {
-//             setError("AcademicResources data not found.");
-//           }
-//         } else {
-//           throw new Error("No such document!");
-//         }
-//       } catch (err) {
-//         setError(err.message || "Error fetching academic data.");
-//       } finally {
-//         setLoading(false);
-//       }
-//     };
-
-//     fetchAcademicData();
-//   }, []);
-
-//   if (loading) return <p className="text-center text-teal-600 animate-pulse">Loading...</p>;
-//   if (error) return <p className="text-center text-red-600">Error: {error}</p>;
-
-//   return (
-//     <section className="bg-gradient-to-br from-teal-500 via-teal-400 to-teal-300 py-16">
-//       <div className="container mx-auto px-6 md:px-12">
-//         <h1 className="text-5xl font-extrabold text-white mb-12 text-center animate-fade-in">
-//           Academic Resources
-//         </h1>
-
-//         {academicData ? (
-//           <div className="bg-white shadow-2xl rounded-lg p-8 md:p-16 space-y-12 transition duration-500 transform hover:scale-105 hover:shadow-3xl">
-//             {/* Map through the academic resources */}
-//             {Object.entries(academicData).map(([key, value]) => (
-//               <div key={key} className="text-center md:text-left border-l-4 border-teal-500 pl-6">
-//                 <h2 className="text-3xl font-bold text-teal-600 mb-4">{key}</h2>
-//                 <p className="text-lg text-gray-700 leading-relaxed">
-//                   {value || `${key} data not available.`}
-//                 </p>
-//               </div>
-//             ))}
-//           </div>
-//         ) : (
-//           <p className="text-center text-gray-600">No academic data available.</p>
-//         )}
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default AcademicResources;
 
 
 import React, { useEffect, useState } from "react";
@@ -105,9 +40,9 @@ const AcademicResources = () => {
   if (error) return <p className="text-center text-red-600">Error: {error}</p>;
 
   return (
-    <section className="py-16 min-h-screen">
-      <div className="container mx-auto px-6 md:px-12">
-        <h1 className="text-5xl font-extrabold text-white mb-12 text-center animate-fade-in">
+    <section className="py-40 min-h-screen">
+      <div className="container mx-auto px-6 lg:px-32"> {/* px-6 for mobile, px-32 for large screens */}
+        <h1 className="text-5xl font-extrabold text-black mb-12 text-center animate-fade-in">
           Academic Resources
         </h1>
 
