@@ -300,6 +300,18 @@ const Navbar = () => {
           </div>
         </div>
       </li>
+      <li className="text-gray-700 hover:text-gray-900 transition-colors duration-200 relative">
+        <div className="flex items-center group">
+          {/* Services button */}
+          <button className="hover:text-orange-500">Blog</button>
+          
+          {/* Dropdown menu, positioned below the button */}
+          <div className="absolute left-0 top-full hidden group-hover:block bg-teal-500 text-white rounded-md p-2 mt-1 z-10">
+            <Link to="/blog" className="block px-4 py-1 hover:bg-teal-700">Blog</Link>
+            <Link to="/blogDetails" className="block px-4 py-1 hover:bg-teal-700">Blog Details</Link>
+          </div>
+        </div>
+      </li>
 
   <li className="text-gray-700 hover:text-orange-500 transition-colors duration-200">
     <Link to="/faq">FAQ</Link>
@@ -349,6 +361,13 @@ const Navbar = () => {
                   <option value="">Services</option>
                   <option value="/service">Service</option>
                   <option value="/serviceDetails">Service Details</option>
+                </select>
+              </li>
+              <li className="text-gray-700 hover:text-gray-900 transition-colors duration-200">
+                <select className="text-black py-2 px-2 rounded bg-white hover:bg-gray-100" onChange={handleSelectChange}>
+                  <option value="">Blogs</option>
+                  <option value="/blog">Blog</option>
+                  <option value="/blogDetails">Blog Details</option>
                 </select>
               </li>
               <li className="text-gray-700 hover:text-gray-900 transition-colors duration-200">
