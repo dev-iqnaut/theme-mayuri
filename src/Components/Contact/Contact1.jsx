@@ -18,8 +18,8 @@ const ContactSection = () => {
 
         if (docSnap.exists()) {
           const siteData = docSnap.data().siteData;
-          if (siteData && siteData["ContactUs"]) {
-            setContactData(siteData["ContactUs"]);
+          if (siteData && siteData["contactUs"]) {
+            setContactData(siteData["contactUs"]);
           } else {
             setError("Contact-Us data not found.");
           }
@@ -84,7 +84,7 @@ const ContactSection = () => {
           </div>
           <h3 className="text-xl font-bold mb-2">Contact</h3>
           <p className="text-gray-500">
-            {contactData.phone_number || "Phone number not available."}
+            {contactData.phoneNumber || "Phone number not available."}
           </p>
         </div>
       </div>

@@ -20,8 +20,8 @@ const HomeSection = () => {
 
         if (docSnap.exists()) {
           const siteData = docSnap.data().siteData;
-          if (siteData && siteData.Home) {
-            setHomeData(siteData.Home);
+          if (siteData && siteData.home) {
+            setHomeData(siteData.home);
           } else {
             setError("Home data not found.");
           }

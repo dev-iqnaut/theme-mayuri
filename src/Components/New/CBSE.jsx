@@ -35,8 +35,8 @@ const CBSEComplianceSection = () => {
 
         if (docSnap.exists()) {
           const siteData = docSnap.data().siteData;
-          if (siteData && siteData.CBSECompliance) {
-            setComplianceData(siteData.CBSECompliance);
+          if (siteData && siteData.cbseCompliance) {
+            setComplianceData(siteData.cbseCompliance);
           } else {
             setError("CBSECompliance data not found.");
           }
@@ -61,7 +61,7 @@ const CBSEComplianceSection = () => {
   if (error) return <p className="text-center text-red-600">Error: {error}</p>;
 
   return (
-    <section className="bg-gradient-to-br from-teal-500 via-teal-400 to-teal-300 py-32">
+    <section className="bg-gradient-to-br from-teal-500 via-teal-400 to-teal-300 py-36">
       <div className="container mx-auto px-6 sm:px-8 md:px-16 lg:px-32"> {/* Responsive padding */}
         <h1 className="text-5xl font-extrabold text-white mb-12 text-center animate-fade-in">
           CBSE Compliance
@@ -76,44 +76,44 @@ const CBSEComplianceSection = () => {
               toggle={() => toggleSection("annual_report")}
             >
               <a
-                href={complianceData.annual_report}
+                href={complianceData.annualReport}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-lg text-teal-600 underline hover:text-teal-800 focus:text-teal-900 transition-colors duration-300"
               >
-                {complianceData.annual_report || "Annual report not available."}
+                {complianceData.annualReport || "Annual report not available."}
               </a>
             </AccordionItem>
 
             {/* CBSE Affiliation Section */}
             <AccordionItem
               title="CBSE Affiliation"
-              isOpen={openSection === "cbse_affiliation"}
-              toggle={() => toggleSection("cbse_affiliation")}
+              isOpen={openSection === "cbseAffiliation"}
+              toggle={() => toggleSection("cbseAffiliation")}
             >
               <a
-                href={complianceData.cbse_affiliation}
+                href={complianceData.cbseAffiliation}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-lg text-teal-600 underline hover:text-teal-800 focus:text-teal-900 transition-colors duration-300"
               >
-                {complianceData.cbse_affiliation || "CBSE affiliation not available."}
+                {complianceData.cbseAffiliation || "CBSE affiliation not available."}
               </a>
             </AccordionItem>
 
             {/* Mandatory Public Disclosure Section */}
             <AccordionItem
               title="Mandatory Public Disclosure"
-              isOpen={openSection === "mandatory_public_disclosure"}
-              toggle={() => toggleSection("mandatory_public_disclosure")}
+              isOpen={openSection === "mandatoryPublicDisclosure"}
+              toggle={() => toggleSection("mandatoryPublicDisclosure")}
             >
               <a
-                href={complianceData.mandatory_public_disclosure}
+                href={complianceData.mandatoryPublicDisclosure}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-lg text-teal-600 underline hover:text-teal-800 focus:text-teal-900 transition-colors duration-300"
               >
-                {complianceData.mandatory_public_disclosure || "Mandatory public disclosure not available."}
+                {complianceData.mandatoryPublicDisclosure || "Mandatory public disclosure not available."}
               </a>
             </AccordionItem>
           </div>

@@ -20,9 +20,9 @@ const Admissions = () => {
           const siteData = docSnap.data().siteData;
           console.log("Site Data fetched:", siteData);
 
-          if (siteData && siteData.Admissions) {
-            setAdmissionsData(siteData.Admissions); // Set the state with admissions data
-            console.log("Admissions data set:", siteData.Admissions);
+          if (siteData && siteData.admissions) {
+            setAdmissionsData(siteData.admissions); // Set the state with admissions data
+            console.log("Admissions data set:", siteData.admissions);
           } else {
             setError("Admissions data not found.");
           }

@@ -22,9 +22,9 @@ const GalleryComponent = () => {
           console.log("Site Data fetched:", siteData); // Log the entire siteData
 
           // Ensure that siteData and "Gallery" exist
-          if (siteData && siteData.Gallery) {
-            setGalleryData(siteData.Gallery); // Access the "Gallery" field
-            console.log("Gallery data set:", siteData.Gallery); // Log the Gallery data
+          if (siteData && siteData.gallery) {
+            setGalleryData(siteData.gallery); // Access the "Gallery" field
+            console.log("Gallery data set:", siteData.gallery); // Log the Gallery data
           } else {
             console.error("Gallery data not found in siteData");
             setError("Gallery data not found.");
@@ -89,13 +89,13 @@ const GalleryComponent = () => {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-2">
             {galleryData.videos && galleryData.videos.length > 0 ? (
-              galleryData.videos.map((video, index) => (
+              galleryData.videos.map((videos, index) => (
                 <div
                   key={index}
                   className="relative overflow-hidden rounded-lg shadow-lg transition-transform transform hover:scale-105"
                 >
                   <video controls className="w-full h-64 object-cover rounded-lg">
-                    <source src={video.url} type="video/mp4" />
+                    <source src={videos.url} type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
                 </div>

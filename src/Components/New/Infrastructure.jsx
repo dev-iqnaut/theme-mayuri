@@ -19,8 +19,8 @@ const InfrastructureSection = () => {
 
         if (docSnap.exists()) {
           const siteData = docSnap.data().siteData;
-          if (siteData && siteData.Infrastructure) {
-            setInfrastructureData(siteData.Infrastructure);
+          if (siteData && siteData.infrastructure) {
+            setInfrastructureData(siteData.infrastructure);
           } else {
             setError("Infrastructure data not found.");
           }
@@ -41,7 +41,7 @@ const InfrastructureSection = () => {
   if (error) return <p className="text-center text-red-600">Error: {error}</p>;
 
   return (
-    <section className="bg-gray-100 py-32">
+    <section className="bg-gray-100 py-36">
       <div className="container mx-auto px-6 lg:px-32 md:px-12">
         <h1 className="text-5xl font-extrabold text-teal-600 mb-12 text-center animate-fade-in">
           Infrastructure

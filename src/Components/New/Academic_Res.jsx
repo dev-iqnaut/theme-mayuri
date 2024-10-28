@@ -18,8 +18,8 @@ const AcademicResources = () => {
 
         if (docSnap.exists()) {
           const siteData = docSnap.data().siteData;
-          if (siteData && siteData.AcademicResources) {
-            setAcademicData(siteData.AcademicResources);
+          if (siteData && siteData.academicResources) {
+            setAcademicData(siteData.academicResources);
           } else {
             setError("AcademicResources data not found.");
           }
