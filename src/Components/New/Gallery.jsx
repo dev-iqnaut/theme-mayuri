@@ -53,7 +53,7 @@ const GalleryComponent = () => {
   console.log("Rendering galleryData:", galleryData);
 
   return (
-    <div className="px-8 lg:px-32 py-14 font-sans max-w-screen-lg mx-auto">
+    <div className="px-8 lg:px-32 py-32 font-sans max-w-screen-lg mx-auto">
       <h1 className="text-5xl font-bold text-center text-gray-800 mb-10">
         Gallery
       </h1>

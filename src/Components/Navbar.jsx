@@ -170,7 +170,7 @@ const Navbar = () => {
 
 
         {/* Main Navbar */}
-        <div className="bg-white shadow-md p-4">
+        <div className="bg-white shadow-md p-2">
           <div className="container mx-auto flex justify-between items-center px-4 md:px-32">
             {/* Logo */}
             <div className="flex items-center">
