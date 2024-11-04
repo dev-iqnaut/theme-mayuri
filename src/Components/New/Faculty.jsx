@@ -107,7 +107,7 @@ const FacultyStaffSection = () => {
   if (error) return <p className="text-center text-red-600">Error: {error}</p>;
 
   return (
-    <section className="py-36 bg-gradient-to-b from-pink-200 to-sky-200">
+    <section className="py-40 bg-gradient-to-b from-pink-200 to-sky-200">
       <div className="container mx-auto px-6 lg:px-32 text-center">
         <h2 className="text-3xl font-bold text-teal-600">Meet Our Professional</h2>
         <p className="text-xl text-gray-600 mt-2">Joyful Journeys Childcare and the Of a Education</p>

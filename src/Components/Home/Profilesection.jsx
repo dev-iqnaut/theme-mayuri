@@ -20,8 +20,8 @@ const PortfolioSection = () => {
         if (docSnap.exists()) {
           const siteData = docSnap.data().siteData;
 
-          if (siteData && siteData["Home"] && siteData["Home"].schoolDetails) {
-            setSchoolName(siteData["Home"].schoolDetails.schoolName); // Set the school name dynamically
+          if (siteData && siteData["home"] && siteData["home"].schoolDetails) {
+            setSchoolName(siteData["home"].schoolDetails.schoolName); // Set the school name dynamically
           }
         }
       } catch (error) {
@@ -45,11 +45,11 @@ const PortfolioSection = () => {
 
   return (
     <div className="bg-white py-10">
-      <div className="container mx-auto px-28">
+      <div className="container mx-auto px-6 lg:px-32">
         <h2 className="text-sm font-semibold text-teal-500 text-center">Latest Portfolio</h2>
         <h1 className="text-3xl font-bold mt-2 mb-6 text-center">
-          
-          Exploring Minds {schoolName || 'Elementary School'}<br />
+          Exploring Minds {schoolName || 'Elementary School'}
+          <br />
           Education the only school
         </h1>
         
@@ -69,7 +69,7 @@ const PortfolioSection = () => {
             </button>
           ))}
         </div>
-
+  
         {/* Image Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {filteredImage && (
@@ -85,7 +85,7 @@ const PortfolioSection = () => {
               </div>
             </div>
           )}
-
+  
           {/* Remaining Images */}
           {images
             .filter(image => image.category !== selectedCategory)
@@ -95,11 +95,10 @@ const PortfolioSection = () => {
               </div>
             ))}
         </div>
-
-        
       </div>
     </div>
   );
+  
 };
 
 export default PortfolioSection;

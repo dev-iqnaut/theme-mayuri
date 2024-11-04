@@ -5,6 +5,8 @@ import AboutSection from './AboutSec1';
 import PricingPlans from './PricePlans';
 import Testimonial from '../Home/Testimonial';
 import StayConnected from '../StayCoonected';
+
+import ParentsCorner from './Parent';
 // import AboutUsSection2 from './try';
 
 
@@ -20,8 +22,10 @@ const About = () => {
      
      {/* <AboutUsSection2/> */}
      <AboutSection/>
+    
      <PricingPlans/>
      <Testimonial/>
+     <ParentsCorner/>
      <StayConnected/>
      
     </div>

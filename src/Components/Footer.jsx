@@ -1,8 +1,4 @@
 
-
-
-
-
 import React, { useEffect, useState } from 'react';
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaMapMarkerAlt, FaEnvelope, FaPhone, FaArrowRight } from 'react-icons/fa';
 import { doc, getDoc } from 'firebase/firestore';
@@ -92,8 +88,9 @@ const Footer = () => {
         <div className="flex flex-col items-center md:items-start">
               
 
-<h3 className="text-lg  mb-4 font-bold text-white pl-14">Pages</h3>
-<ul className="grid grid-cols-2 gap-y-2 text-gray-300 text-sm">
+<h3 className="text-lg  mb-4 font-bold text-white pl-8">Quick Links </h3>
+<div className="border-t border-white-600 w-full mb-4"></div> 
+<ul className="grid grid-cols-2 gap-y-2 gap-x-4 text-gray-300 text-sm">
   <li><a href="/" onClick={() => handleLinkClick('/')} className="hover:text-white transition duration-300">Home</a></li>
   <li><a href="/about" onClick={() => handleLinkClick('/about')} className="hover:text-white transition duration-300">About Us</a></li>
   <li><a href="/academic_re" onClick={() => handleLinkClick('/academic_re')} className="hover:text-white transition duration-300"> Resources</a></li>
@@ -116,17 +113,18 @@ const Footer = () => {
         {/* Contact Information with Divider */}
         <div className="flex flex-col items-center md:items-start">
           <h4 className="text-lg font-bold mb-4 text-white">Contact Us</h4>
-          <div className="border-t border-gray-600 w-full mb-4"></div> {/* Divider line below Contact heading */}
+          <div className="border-t border-white-600 w-full mb-4"></div> {/* Divider line below Contact heading */}
           <ul className="space-y-2 text-sm">
             <li className="flex items-center"><FaMapMarkerAlt className="text-white mr-2" />{contactData.location || 'Location not available'}</li>
             <li className="flex items-center"><FaEnvelope className="text-white mr-2" />{contactData.email || 'Email not available'}</li>
-            <li className="flex items-center"><FaPhone className="text-white mr-2" />{contactData.phone_number || 'Phone not available'}</li>
+            <li className="flex items-center"><FaPhone className="text-white mr-2" />{contactData.phoneNumber || 'Phone not available'}</li>
           </ul>
         </div>
 
         {/* Newsletter Section */}
         <div className="flex flex-col items-center md:items-start">
           <h4 className="text-lg font-bold mb-4 text-white">Our Newsletter</h4>
+          <div className="border-t border-white-600 w-full mb-4"></div> 
           <p className="text-sm mb-4 text-gray-300">Subscribe to our newsletter <br/> to get our latest updates</p>
           <div className="flex">
             <input type="email" placeholder="Enter Your Email" className="p-2 text-sm w-full bg-gray-700 rounded-l-md focus:outline-none" />
@@ -148,7 +146,7 @@ const Footer = () => {
           </div>
         </div>
       </div> */}
-      <div className="container mx-auto mt-8 text-center border-t border-gray-600 pt-4 text-sm text-gray-400">
+      {/* <div className="container mx-auto mt-8 text-center border-t border-gray-600 pt-4 text-sm text-gray-400">
   <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-96">
     <span>© Created by 
       <a href="https://www.linkedin.com/in/mayuri-mahadik-060099279/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white underline ml-1 transition-colors duration-300">
@@ -164,7 +162,29 @@ const Footer = () => {
       <a href="#" className="hover:text-white">Contact Us</a>
     </div>
   </div>
+</div> */}
+ <div className="border-t border-white-600 mt-4 mx-32"></div>
+
+<div className="container mx-auto mt-8 text-center pt-2 text-sm text-gray-400">
+  
+  <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-96">
+    <span>© Created by 
+      <a href="https://www.linkedin.com/in/mayuri-mahadik-060099279/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white underline ml-1 transition-colors duration-300">
+        Mayuri Raghunath Mahadik
+      </a> 
+       2024 | All Rights Reserved
+    </span>
+    <div className="flex space-x-4">
+      <a href="#" className="hover:text-white">Terms & Conditions</a>
+      <span>|</span>
+      <a href="#" className="hover:text-white">Privacy Policy</a>
+      <span>|</span>
+      <a href="#" className="hover:text-white">Contact Us</a>
+    </div>
+  </div>
+ 
 </div>
+
 
     </footer>
   );
