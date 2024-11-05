@@ -2,8 +2,8 @@
 
 import React, { useEffect, useState } from "react";
 import { doc, getDoc } from "firebase/firestore";
-import { db } from "../firebaseConfig"; // Adjust the path as necessary
-import Slider from "react-slick"; // Import Slider from react-slick
+import { db } from "../firebaseConfig"; 
+import Slider from "react-slick"; 
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 

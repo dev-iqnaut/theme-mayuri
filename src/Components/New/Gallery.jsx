@@ -2,8 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { doc, getDoc } from "firebase/firestore";
-import { db } from "../firebaseConfig"; // Adjust the path as necessary
-
+import { db } from "../firebaseConfig"; 
 const GalleryComponent = () => {
   const [galleryData, setGalleryData] = useState(null);
   const [loading, setLoading] = useState(true);

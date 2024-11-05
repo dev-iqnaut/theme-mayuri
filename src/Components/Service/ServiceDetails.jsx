@@ -3,11 +3,10 @@
 
 
 import React from "react";
-// Import images if they are local assets
-import service1 from '../Components/Assets/service1.jpg'; // Update the path as necessary
-import service2 from '../Components/Assets/service2.jpg'; // Update the path as necessary
-import service3 from '../Components/Assets/service3.jpg'; // Update the path as necessary
 
+import service1 from '../Components/Assets/service1.jpg'; 
+import service2 from '../Components/Assets/service2.jpg'; 
+import service3 from '../Components/Assets/service3.jpg'; 
 const ServiceDetails1 = () => {
   return (
     <div className="max-w-7xl mx-auto py-12 px-6">
